@@ -14,6 +14,7 @@ export default function handler(
     res.status(200).json({ distance: globalDis + "" });
   } else {
     globalDis = req.query.id;
+    console.log(globalDis);
     res.status(200).json({ distance: "true" });
   }
 }
