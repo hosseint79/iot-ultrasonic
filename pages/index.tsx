@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   }, []);
 
   const apiHandler = async () => {
-    const data = await axios.get("/api/distance");
+    const data = await axios.post("/api/distance");
     setDistance(data.data.distance);
     console.log(data.data.distance);
   };
