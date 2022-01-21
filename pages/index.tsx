@@ -9,12 +9,13 @@ const Home: NextPage = () => {
   useEffect(() => {
     setInterval(() => {
       apiHandler();
-    }, 10);
+    }, 1000);
   }, []);
 
   const apiHandler = async () => {
     const data = await axios.get("/api/distance");
     setDistance(data.data.distance);
+    console.log(data.data.distance);
   };
 
   const colorHandle = () => {
