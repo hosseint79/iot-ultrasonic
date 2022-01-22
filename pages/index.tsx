@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     setInterval(() => {
       apiHandler();
-    }, 1000);
+    }, 200);
   }, []);
 
   const apiHandler = async () => {
@@ -44,14 +44,6 @@ const Home: NextPage = () => {
         boxShadow: "0 0 15px 1.3px #dddd ",
       }}
     >
-      <div
-        onClick={() => {
-          axios.get("/api/distance?id=" + (distance + 1));
-        }}
-      >
-        {" "}
-        asdf
-      </div>
       <div
         style={{
           width: "30px",
